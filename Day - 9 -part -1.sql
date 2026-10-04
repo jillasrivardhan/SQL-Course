@@ -121,6 +121,29 @@ on
 departments.dept_id = employees.dept_id
 group by departments.dept_name;
 
+select * from employees;
+
+select * from departments;
+
+select departments.dept_name , max(employees.salary) from employees inner join departments
+on
+employees.dept_id = departments.dept_id 
+group by departments.dept_name;
+
+
+select employees.emp_name,departments.dept_name,employees.salary from 
+employees inner join departments on
+employees.dept_id = departments.dept_id
+order by employees.salary desc;
+
+select * from employees;
+
+select * from departments;
+
+select employees.emp_name from employees where employees.emp_name = 
+(select max(employees.salary),departments.dept_name from employees inner join departments on
+employees.dept_id = departments.dept_id
+group by departments.dept_name);
 
 
 
