@@ -78,7 +78,7 @@ select * from emp where department in
 SELECT *
 FROM emp
 WHERE department IN (
-    SELECT department
+    SELECT departmentcourses
     FROM emp
     WHERE salary > 70000
 );
