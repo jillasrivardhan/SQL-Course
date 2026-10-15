@@ -46,6 +46,16 @@ delimiter ;
 
 call revenue();
 
+show databases;
+
+use information_schema;
+
+show tables;
+
+select * from routines;
+
+
+
 
 
 
